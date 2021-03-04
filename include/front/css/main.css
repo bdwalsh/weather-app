@@ -1,0 +1,102 @@
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3.2rem 0;
+  background: #f4f5f6;
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+section {
+  background: #f4f5f6;
+}
+section h5 {
+  font-size: 2.3rem;
+  margin: 0.6rem;
+}
+
+.city-select {
+  margin: 0.6rem;
+}
+.city-select select {
+  border: 2px solid #000;
+  padding: 10px 30px 10px 10px;
+  background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+  background-position: right 10% top 60%;
+}
+
+.weather-panels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media (max-width: 1199px) {
+  .weather-panels {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767px) {
+  .weather-panels {
+    flex-direction: column;
+  }
+}
+.weather-panels .weather-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.6rem;
+  margin: 0.6rem;
+  background: #fff;
+  flex: 1 0 0;
+  text-align: center;
+  -webkit-box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1199px) {
+  .weather-panels .weather-card {
+    align-items: center;
+    flex: 1 1 30%;
+  }
+}
+@media (max-width: 991px) {
+  .weather-panels .weather-card {
+    align-items: center;
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 767px) {
+  .weather-panels .weather-card {
+    width: auto;
+  }
+}
+.weather-panels .fa-cloud-rain {
+  color: #9fa09f;
+}
+.weather-panels .fa-snowflake {
+  color: #a3c6ff;
+}
+.weather-panels .fa-sun {
+  color: #fdb813;
+}
+.weather-panels .fa-cloud {
+  color: #9fa09f;
+}
+.weather-panels i {
+  margin: 0.6rem 0;
+  font-size: 3.2rem;
+}
+
+/*# sourceMappingURL=main.css.map */

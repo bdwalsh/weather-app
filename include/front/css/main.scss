@@ -1,0 +1,84 @@
+@import "./mixins.scss";
+
+section {
+  background: #f4f5f6;
+
+  h5 {
+    font-size: 2.3rem;
+    margin: $small-margin;
+  }
+}
+
+.city-select {
+  margin: $small-margin;
+
+  select {
+    border: 2px solid #000;
+    padding: 10px 30px 10px 10px;
+    background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2328303d'><polygon points='0,0 10,0 5,5'/></svg>") no-repeat;
+    background-position: right 10% top 60%;
+  }
+}
+
+.weather-panels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include breakpoint(md) {
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint(xs) {
+    flex-direction: column;
+  }
+
+  .weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $small-margin;
+    margin: $small-margin;
+    background: #fff;
+    flex: 1 0 0;
+    text-align: center;
+    -webkit-box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 10%);
+    box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 10%);
+
+    @include breakpoint(md) {
+      align-items: center;
+      flex: 1 1 30%;
+    }
+
+    @include breakpoint(sm) {
+      align-items: center;
+      flex: 1 1 45%;
+    }
+
+    @include breakpoint(xs) {
+      width: auto;
+    }
+  }
+
+  .fa-cloud-rain {
+    color: #9fa09f;
+  }
+
+  .fa-snowflake {
+    color: #a3c6ff;
+  }
+
+  .fa-sun {
+    color: #fdb813;
+  }
+
+  .fa-cloud {
+    color: #9fa09f;
+  }
+
+  i { 
+    margin: $small-margin 0;
+    font-size: 3.2rem;
+  }
+}
+

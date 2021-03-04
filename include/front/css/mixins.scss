@@ -1,0 +1,61 @@
+$small-margin: 0.6rem;
+
+.wrap { 
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3.2rem 0;
+  background: #f4f5f6;
+}
+
+//Breakpoint Mixins
+@mixin breakpoint($point) {
+
+	@if $point == md {
+
+		@media (max-width: 1199px) {
+
+			@content;
+		}
+	}
+
+	@else if $point == sm {
+
+		@media (max-width: 991px) {
+
+			@content;
+		}
+	}
+
+	@else if $point == xs {
+
+		@media (max-width: 767px) {
+
+			@content;
+		}
+	}
+
+	@else if $point == xxs {
+
+		@media (max-width: 479px) {
+
+			@content;
+		}
+	}
+
+}
+
+.spin {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
